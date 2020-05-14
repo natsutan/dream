@@ -10,15 +10,15 @@ path = "csv/export.csv"
 with open(path, 'r') as file:
     # リスト形式
     f = csv.reader(file, delimiter=',', quotechar='"')
+
     # ヘッダーはスキップ
     next(f)
-    a = 0
-    for col in f:
-        print(col)
-        a = a + 1
-        if a == 10:
-            break
 
+    name = []
+    for col in f:
+        name.append(img_path + col[9])
+
+print(name)
 
 '''
 デバッグ中
