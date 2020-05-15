@@ -1,3 +1,6 @@
 
 .idea/
 natu/.ipynb_checkpoints/
+labelbox/test.txt
+labelbox/validation.txt
+labelbox/train.txt
