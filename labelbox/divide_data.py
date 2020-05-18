@@ -1,47 +1,52 @@
 #!python3
 import csv
 
-# イメージパス
-img_path = "dummy/image/"
+# ファイル書き込み
+def file_w(p, l):
+    with open(p, 'w') as f:
+        f.write('\n'.join(l))
 
-# 読み込みファイルのパス
-path = "csv/export.csv"
+def main():
+    # イメージパス
+    img_path = "dummy/image/"
 
-# テストファイルのパス
-test_path = "test.txt"
-# 検証ファイルのパス
-valid_path = "validation.txt"
-# 訓練ファイルのパス
-train_path = "train.txt"
+    # 読み込みファイルのパス
+    path = "csv/export.csv"
 
-with open(path, 'r') as f:
-    # リスト形式に読み込む
-    l = csv.reader(f, delimiter=',', quotechar='"')
+    # テストファイルのパス
+    test_path = "test.txt"
+    # 検証ファイルのパス
+    valid_path = "validation.txt"
+    # 訓練ファイルのパス
+    train_path = "train.txt"
 
-    # ヘッダーはスキップ
-    next(l)
+    with open(path, 'r') as f:
+        # リスト形式に読み込む
+        l = csv.reader(f, delimiter=',', quotechar='"')
 
-    test_list = []
-    valid_list = []
-    train_list = []
-    for i, col in enumerate(l):
-        fp = img_path + col[9]
-        c = i % 3
-        if  c == 1 and len(test_list) < 100:
-            test_list.append(fp)
-        elif c == 2 and len(valid_list) < 100:
-            valid_list.append(fp)
-        else:
-            train_list.append(fp)
+        # ヘッダーはスキップ
+        next(l)
 
-# テストファイル書き込み
-with open(test_path, 'w') as f:
-    f.write('\n'.join(test_list))
+        test_list = []
+        valid_list = []
+        train_list = []
+        for i, col in enumerate(l):
+            fp = img_path + col[9]
+            c = i % 3
+            if  c == 1 and len(test_list) < 100:
+                test_list.append(fp)
+            elif c == 2 and len(valid_list) < 100:
+                valid_list.append(fp)
+            else:
+                train_list.append(fp)
 
-# 検証ファイル書き込み
-with open(valid_path, 'w') as f:
-    f.write('\n'.join(valid_list))
+    # テストファイル書き込み
+    file_w(test_path, test_list)
 
-# 訓練ファイル書き込み
-with open(train_path, 'w') as f:
-    f.write('\n'.join(train_list))
+    # 検証ファイル書き込み
+    file_w(valid_path, valid_list)
+
+    # 訓練ファイル書き込み
+    file_w(train_path, train_list)
+
+main()
