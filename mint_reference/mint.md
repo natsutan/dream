@@ -27,6 +27,17 @@ gen_test.pyはglob等の使い方のサンプルとして見てください。
 - train.log darknetの学習ログ
 - loss.txt train.logからlossの部分だけを抜き出し。
 
+学習全体のグラフ(縦軸がloss, 横軸がepoc)<br>
+
+![loss1](https://github.com/natsutan/dream/blob/master/mint_reference/loss1.png)
+
+<br>
+Epoc 1000以降のグラフ<br>
+
+![loss2](https://github.com/natsutan/dream/blob/master/mint_reference/loss2.png)
+
+80000epoc程度学習することで、lossが0.5を切れそう。
+
 ## 学習注意点
 デフォルトで、weightファイルの保存が、100, 200, ... 900, 10000 epocと、900から10000まで非常に間がある。使いにくいので、ソースファイルの修正を推奨します。
 
