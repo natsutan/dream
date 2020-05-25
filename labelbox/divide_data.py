@@ -49,4 +49,5 @@ def main():
     # 訓練ファイル書き込み
     file_w(train_path, train_list)
 
-main()
+if __name__ == "__main__":
+    main()
