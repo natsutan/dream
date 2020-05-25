@@ -8,7 +8,6 @@ https://github.com/pjreddie/darknet/blob/master/cfg/yolov2-voc.cfg
 
 mint.cfgとyolov2-voc.cfgのdiffを取ると修正箇所が分かります。
 
-
 ## 設定ファイル
 - datasets.data 
 - train.txt
