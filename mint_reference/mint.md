@@ -1,5 +1,7 @@
 # mint project 設定ファイルなど
 
+https://github.com/natsutan/dream/tree/master/mint_reference
+
 ## network設定
 mint.cfg がNNの設定ファイルです。
 
