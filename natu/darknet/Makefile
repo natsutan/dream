@@ -11,6 +11,7 @@ ZED_CAMERA_v2_8=0 # ZED SDK 2.X
 # set GPU=1 and CUDNN=1 to speedup on GPU
 # set CUDNN_HALF=1 to further speedup 3 x times (Mixed-precision on Tensor Cores) GPU: Volta, Xavier, Turing and higher
 # set AVX=1 and OPENMP=1 to speedup on CPU (if error occurs then set AVX=0)
+# 勝手になおせる
 
 USE_CPP=0
 DEBUG=0

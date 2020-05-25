@@ -1,0 +1,5 @@
+classes= 1
+train  = /home/natu/gitproj/darknet/cfg/mint/train.txt
+valid  = /home/natu/gitproj/darknet/cfg/mint/vals.txt
+names = /home/natu/gitproj/darknet/cfg/mint/class.txt
+backup = /home/natu/gitproj/darknet/cfg/mint/backup
