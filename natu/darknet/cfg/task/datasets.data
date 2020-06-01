@@ -1,4 +1,5 @@
 classes= 3
 train=cfg/task/train.txt
 valid=cfg/task/test.txt
+names=cfg/task/label.txt
 backup=cfg/task/backup/
