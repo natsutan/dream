@@ -1,6 +1,4 @@
 classes= 3
-train=/content/gdrive/My Drive/darknet/cfg/task/train.txt
-valid=/content/gdrive/My Drive/darknet/cfg/task/test.txt
-backup=/content/gdrive/My Drive/darknet/cfg/task/backup/ 
-
-
+train=cfg/task/train.txt
+valid=cfg/task/test.txt
+backup=cfg/task/backup/
