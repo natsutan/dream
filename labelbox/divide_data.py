@@ -1,5 +1,6 @@
 #!python3
 import csv
+import json
 
 # ファイル書き込み
 def file_w(p, l):
@@ -31,6 +32,11 @@ def main():
         valid_list = []
         train_list = []
         for i, col in enumerate(l):
+            # オブジェクトの情報が空の場合はスキップ
+            json_data = json.loads(col[3])
+            if not json_data:
+                continue
+
             fp = img_path + col[9]
             c = i % 3
             if  c == 1 and len(test_list) < 100:
